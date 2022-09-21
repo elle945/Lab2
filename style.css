@@ -28,7 +28,7 @@
   font-size: 14px;
   font-weight: 800;
   line-height: 40px;
-  margin: 2rem;
+  margin: 0.5rem;
   max-width: 135px;
   position: relative;
   text-transform: uppercase;
@@ -47,11 +47,9 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
-
 a {
   color: var(--two);
 }
-
 li {
   list-style: none;
 }
@@ -73,7 +71,7 @@ a.go-home {
   position: fixed;
   background-color: var(--one);
   padding: 8px;
-  height: 8vh;
+  height: 9vh;
   width: 100%;
   /*Position to hold dropdown fixed*/
 
@@ -83,10 +81,11 @@ a.go-home {
   color: var(--two);
 }
 
-.menu {
+ul.nav-links {
   display: flex;
   gap: 1em;
   font-size: 18px;
+  margin: 0;
 }
 .menu li:hover {
   background-color: var(--ten);
@@ -107,10 +106,10 @@ a.go-home {
   position: absolute;
   display: none;
   border-radius: 8px;
-  top: 35px;
+  top: 30px;
   overflow: auto;
 }
-
+/*This distance is important for dropdown to be useful*/
 .dropdown li + li {
   margin-top: 10px;
 }
@@ -135,8 +134,8 @@ input[type="checkbox"] {
 }
 
 /*Validated 15-09-2022*/
-@media only screen and (max-width: 650px) {
-  .menu {
+@media only screen and (max-width: 670px) {
+  ul.nav-links {
     display: none;
     position: absolute;
     background-color: var(--one);
@@ -145,6 +144,7 @@ input[type="checkbox"] {
     text-align: center;
     padding: 16px 0;
   }
+
   /*HELP CHANGE COLOR ON LINKS*/
   .main-menu {
     color: var(--two);
@@ -152,7 +152,8 @@ input[type="checkbox"] {
   .hamburger {
     display: block;
   }
-  input[type="checkbox"]:checked ~ .menu {
+
+  input[type="checkbox"]:checked ~ ul.nav-links {
     display: block;
   }
   .dropdown {
@@ -160,6 +161,7 @@ input[type="checkbox"] {
     top: 30px;
     /*Moves dropdown to the right*/
     transform: translateX(28%);
+    overflow: auto;
   }
   .menu li:hover {
     display: flex;
@@ -284,6 +286,16 @@ input[type="checkbox"] {
   margin-right: 50px;
 }
 /*change inside the grid*/
+#content2 h1 {
+  padding: 10px;
+}
+#content2 p {
+  padding: 0 30px;
+}
+
+#content3 p {
+  padding: 0 30px;
+}
 
 .highlight {
   font-style: oblique;
@@ -313,6 +325,7 @@ input[type="checkbox"] {
   #content3,
   #content4 {
     margin: 2px;
+    height: 50vh;
   }
 }
 /*Validated 17-09-2022*/
@@ -323,24 +336,36 @@ input[type="checkbox"] {
 }
 
 /*Index1*/
-div.hero-image2 {
+#hero-image2 {
   background-image: url(/img/background.jpg);
   background-color: var(--seven);
-  height: 120vh;
+  height: 200vh;
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 img.map {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20vh;
+  margin-top: 10vh;
   width: 50%;
   display: flex;
   height: 70vh;
   width: 80%;
 }
+
+#hero-image2 p {
+  font-size: 34px;
+  color: var(--two);
+  text-align: center;
+  padding: 20vh 0 10vh;
+}
+
 @media only screen and (max-width: 550px) {
+  div.hero-image2 {
+    height: 320vh;
+  }
   img.map {
     height: 45vh;
   }
@@ -349,4 +374,52 @@ img.map {
   img.map {
     height: 40vh;
   }
+}
+/*Will I keep this*/
+@media only screen and (min-width: 375px) and (max-width: 750px) {
+  .btn {
+    margin: 0rem;
+  }
+}
+.info h2 {
+  font-size: 18px;
+  color: var(--two);
+  text-align: center;
+  padding: 5vh 0 0;
+}
+.description {
+  font-size: 14px;
+  color: var(--two);
+  text-align: center;
+  padding: 0;
+}
+/*Validated 21-09-2022*/
+.application {
+  color: var(--eight);
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.important {
+  text-decoration: solid;
+  text-transform: uppercase;
+}
+
+.container {
+  background-image: url(/img/bottom.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-attachment: fixed;
+  height: 100vh;
+  padding: 0;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--two);
+  font-size: 2rem;
+  background-color: var(--seven);
 }
