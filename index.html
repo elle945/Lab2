@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Ask if this is right content-->
+    <meta name="description" content="Festival" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Boomland</title>
+  </head>
+  <!--Validated 15-09-2022-->
+  <body>
+    <section>
+      <nav class="navbar">
+        <!--do I need this underneat or is it same as go-home>-->
+        <h1 class="logo">
+          <a class="go-home" href="#">BOOMLAND PROJECT</a>
+        </h1>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!--Why can i only KEEP IT HERE-->
+          <div class="menu">
+            <li class="main-menu">
+              <a href="/">Main menu</a>
+              <ul class="dropdown">
+                <li><a href="#lineup">Lineup</a></li>
+                <li><a href="index2.html">Tickets</a></li>
+                <li><a href="index1.html">Sitemap</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/">Contact us</a></li>
+          </div>
+        </ul>
+      </nav>
+    </section>
+    <section id="hero-image" class="responsive">
+      <div class="hero-text">
+        <h1>BOOMLAND GATHERING 2022</h1>
+      </div>
+      <div class="hero-rubriker">
+        <h2>We awake.</h2>
+        <h2>We dream.</h2>
+        <h2>We BOOM.</h2>
+      </div>
+      <div class="grid-container">
+        <div id="content1"></div>
+        <div id="content2">
+          <h1>Lorem ipsum dolor sit.</h1>
+          <p>
+            <a id="about"></a>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+            laborum atque unde voluptatum! Sit ipsa ab sequi repellendus soluta
+            voluptate ullam porro, impedit nihil iste, expedita quidem fugit qui
+            ipsam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Modi rem, ex delectus voluptas eligendi totam ratione tenetur sunt
+            explicabo quasi? Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Sunt tempore dolorum vitae voluptates!
+            <span class="prime">
+              Adipisci facere nobis, enim magni officiis repellendus voluptatum.
+            </span>
+            Cupiditate minima quisquam eum debitis fugiat, natus itaque ipsa.
+          </p>
+        </div>
+        <div id="content3">
+          <h2>Lorem.</h2>
+          <p>
+            Lorem ipsum dolor sit amet adipisicing elit. Commodi, deserunt.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptates, eaque.
+          </p>
+          <h2>Ipsum.</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur elit. Excepturi, harum.
+            <span class="highlight"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Qui,in!</span
+            >
+          </p>
+          <button class="btn" onclick="window.location.href='#'">
+            🢁 To the top 🢁
+          </button>
+        </div>
+        <div id="content4"></div>
+      </div>
+    </section>
+    <div id="footer"></div>
+  </body>
+</html>
