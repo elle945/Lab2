@@ -3,27 +3,17 @@
 * {
   font-family: roboto;
   box-sizing: border-box;
-  /*header footer color*/
-  --one: #1c1818;
   --two: #ffffff;
-  /*1st transparant square*/
   --three: rgba(232, 225, 164, 0.5);
-  /*2nd transparant square*/
   --four: rgba(217, 217, 217, 0.5);
-  /*3rd transparant square*/
   --five: rgba(154, 194, 228, 0.5);
-  /* slideshow transparant square*/
-  --six: rgba(216, 227, 228, 0.5);
-  /* end pitcure transparant square*/
-  --seven: #251d1d;
-  --eight: #080505;
+  --eight: #000000;
   --nine: rgba(240, 160, 217, 0.3);
-  --ten: rgba(12, 109, 127, 0.8);
 }
 /*Validated 15-09-2022*/
 
 .btn {
-  color: rgba(56, 16, 44, 0.8);
+  color: var(--eight);
   cursor: pointer;
   font-size: 14px;
   font-weight: 800;
@@ -46,6 +36,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  min-height: calc(100vh - 75px - 40px);
 }
 a {
   color: var(--two);
@@ -69,7 +60,7 @@ a.go-home {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  background-color: var(--one);
+  background-color: var(--eight);
   padding: 8px;
   height: 9vh;
   width: 100%;
@@ -88,7 +79,7 @@ ul.nav-links {
   margin: 0;
 }
 .menu li:hover {
-  background-color: var(--ten);
+  background-color: var(--five);
   border-radius: 5px;
   transition: 0.3s ease;
 }
@@ -97,11 +88,9 @@ ul.nav-links {
 }
 .main-menu {
   position: relative;
-  color: var(--two);
 }
-
 .dropdown {
-  background-color: var(--one);
+  background-color: var(--eight);
   padding: 0.7em 0;
   position: absolute;
   display: none;
@@ -119,7 +108,7 @@ ul.nav-links {
   text-align: center;
 }
 .dropdown li:hover {
-  background-color: var(--ten);
+  background-color: var(--five);
 }
 .main-menu:hover .dropdown {
   display: block;
@@ -138,17 +127,13 @@ input[type="checkbox"] {
   ul.nav-links {
     display: none;
     position: absolute;
-    background-color: var(--one);
+    background-color: var(--eight);
     right: 0;
     left: 0;
     text-align: center;
     padding: 16px 0;
   }
 
-  /*HELP CHANGE COLOR ON LINKS*/
-  .main-menu {
-    color: var(--two);
-  }
   .hamburger {
     display: block;
   }
@@ -167,7 +152,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--nine);
+    background-color: var(--five);
     transition: 0.3s ease;
   }
   .go-home {
@@ -181,8 +166,8 @@ input[type="checkbox"] {
 /*2. HERO IMAGE*/
 #hero-image {
   background-image: url(/img/background.jpg);
-  background-color: var(--seven);
-  height: 280vh;
+  background-color: var(--eight);
+  height: 220vh;
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -296,6 +281,9 @@ input[type="checkbox"] {
 #content3 p {
   padding: 0 30px;
 }
+#content3 h2 {
+  padding: 2px;
+}
 
 .highlight {
   font-style: oblique;
@@ -303,7 +291,28 @@ input[type="checkbox"] {
 .prime {
   font-weight: bold;
 }
-
+@media only screen and (min-width: 580px) and (max-width: 770px) {
+  #content1,
+  #content2,
+  #content3,
+  #content4 {
+    margin: 2px;
+    height: 50vh;
+  }
+  #hero-image {
+    height: 330vh;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 580px) {
+  #hero-image {
+    height: 320vh;
+  }
+}
+@media only screen and (min-width: 580px) and (max-width: 770px) {
+  #hero-image {
+    height: 240vh;
+  }
+}
 /*Validated 16-09-2022*/
 @media only screen and (max-width: 580px) {
   .grid-container {
@@ -339,7 +348,7 @@ input[type="checkbox"] {
 #hero-image2 {
   background-image: url(/img/background.jpg);
   background-color: var(--seven);
-  height: 200vh;
+  height: 220vh;
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -353,6 +362,11 @@ img.map {
   display: flex;
   height: 70vh;
   width: 80%;
+  border-radius: 10px;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
 }
 
 #hero-image2 p {
@@ -362,21 +376,13 @@ img.map {
   padding: 20vh 0 10vh;
 }
 
-@media only screen and (max-width: 550px) {
-  div.hero-image2 {
-    height: 320vh;
-  }
-  img.map {
-    height: 45vh;
-  }
-}
-@media only screen and (min-width: 375px) and (max-width: 499px) {
+@media only screen and (min-width: 275px) and (max-width: 499px) {
   img.map {
     height: 40vh;
   }
 }
 /*Will I keep this*/
-@media only screen and (min-width: 375px) and (max-width: 750px) {
+@media only screen and (min-width: 275px) and (max-width: 750px) {
   .btn {
     margin: 0rem;
   }
@@ -398,7 +404,7 @@ img.map {
   color: var(--eight);
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 30%;
 }
 .important {
   text-decoration: solid;
@@ -408,10 +414,11 @@ img.map {
 .container {
   background-image: url(/img/bottom.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: top;
+  background-size: contain;
   background-attachment: fixed;
   height: 100vh;
+  width: 100%;
   padding: 0;
 }
 .centered {
@@ -420,6 +427,39 @@ img.map {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--two);
-  font-size: 2rem;
-  background-color: var(--seven);
+  font-size: 1rem;
+  padding: 8px;
+  height: 3rem;
+  background-color: var(--five);
+  border-radius: 10px;
+}
+
+#footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: var(--eight);
+  color: var(--two);
+  font-size: 0.9rem;
+  opacity: 0.5;
+  text-align: center;
+}
+@media only screen and (min-width: 375px) and (max-width: 1000px) {
+  #hero-image2 {
+    height: 190vh;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 750px) {
+  .centered {
+    position: absolute;
+    top: 30%;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 600px) {
+  .centered {
+    position: absolute;
+    top: 70%;
+  }
 }
